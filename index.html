@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RapidTicketRide</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./Images/logo.png" type="image/x-icon">
+    <!-- main css -->
+    <link rel="stylesheet" href="./style.css">
+    <!--======= tailwind and daisy ui cdn ===========-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!--=========== Font awesome CDN ===========-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- tailwind custom classes -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-color': '#49D293;',
+                        'secondary-color': 'rgba(181, 0, 106, 0.8)',
+                    }
+
+                }
+            }
+        }
+    </script>
+
+    <!-- custom styles -->
+
+</head>
+<header class="header">
+    <!-- Add logo and navigation links here -->
+    <nav class="p-5 bg-white shadow md:flex md:items-center md:justify-between w-full">
+        <div class="flex justify-between items-center ">
+            <span class="text-2xl cursor-pointer">
+                <img class="h-10 inline" src="">
+                RapidTicketRide
+            </span>
+
+            <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+                <ion-icon name="menu" onclick="Menu(this)">d</ion-icon>
+            </span>
+        </div>
+
+        <ul
+            class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+            <li class="mx-4 my-6 md:my-0">
+                <a href="#" class="text-lg hover:text-lame-500 duration-500">Home</a>
+            </li>
+            <li class="mx-4 my-6 md:my-0">
+                <a href="#" class="text-xl hover:text-lame-500 duration-500">About</a>
+            </li>
+            <li class="mx-4 my-6 md:my-0">
+                <a href="#" class="text-xl hover:text-lame-500 duration-500">Destination</a>
+            </li>
+            <li class="mx-4 my-6 md:my-0">
+                <a href="#" class="text-xl hover:text-lame-500 duration-500">Search</a>
+            </li>
+
+            <button class="font-[Poppins] duration-500 px-6 py-2 mx-4  rounded w-24 flex gap-2">
+                Bus
+                <img src="./images/bus-icon.png" alt="" srcset="">
+            </button>
+            <h2 class=""></h2>
+        </ul>
+    </nav>
+</header>
+
+<body>
+    <main>
+        <!-- Featured Section -->
+        <section class="features-section section">
+            <div class="features-content flex flex-col ">
+                <h2>End-to-End Travel with </h2>
+                <span>P Paribahan</span>
+                <p>Yes, you can run unit tests and view the results directly within the app. The integrated testing
+                    features allow for a streamlined.</p>
+                    <div class="features-actions">
+                        <button class="buy-tickets-button">Buy Tickets</button>
+                    </div>   
+            </div>
+           
+            <!-- <div class="features-stats">
+                <div class="features-stat">
+                  <i class="material-icons">people</i>
+                  <h3>500K+</h3>
+                  <p>Registered Users</p>
+                </div>
+                <div class="features-stat">
+                  <i class="material-icons">local_taxi</i>
+                  <h3>1.7 L</h3>
+                  <p>Tickets Sold</p>
+                </div>
+                <div class="features-stat">
+                  <i class="material-icons">business</i>
+                  <h3>80K+</h3>
+                  <p>Rental Partners</p>
+                </div>
+              </div> -->
+          
+        </section>
+
+        <section id="ticket-details">
+            <!-- Ticket details like route, seat selection, price, etc. go here -->
+        </section>
+        <section id="passenger-info">
+            <!-- Passenger information form goes here -->
+        </section>
+        <section id="policy-links">
+            <!-- Terms, privacy policy, and download app links go here -->
+        </section>
+    </main>
+    <footer class="footer p-16 mt-5">
+        <div class="flex">
+            <div class="footer-content">
+                <div class="footer-description">
+                    <p>P-Ticket</p>
+                    <p>
+                        A digital platform to make your daily commuting better.
+                    </p>
+                </div>
+            </div>
+            <div class="app-links">
+                <p class="text-center"> Download Our App</p>
+                <a href="#googleplay" class="app-store-link">
+                    <img src="./images/get-it-on-google-play-badge.png" alt="" srcset="">
+                </a>
+            </div>
+        </div>
+        <div class="divider mt-5"> </div>
+        <div class="footer-content flex justify-between items-center mt-5">
+            <p>&copy; 2024 P-Ticket services limited. All rights reserved.</p>
+            <ul class="flex justify-end">
+                <li><a href="#terms">Terms & condition</a></li>
+                <li><a href="#download">Download our app</a></li>
+                <li><a href="#refund">Return & refund policy</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="./main.js"></script>
+</body>
+
+</html>

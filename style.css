@@ -1,0 +1,232 @@
+
+
+/*==================== VARIABLES CSS ====================*/
+:root {
+    --header-height: 3rem;
+  
+    /*========== Colors ==========*/
+    /* Change favorite color */
+    --hue-color: 122;
+    /*You can change Your Website Main Color css : Purple 250 - Green 142 - Blue 230 - Pink 340*/ 
+  
+    /* HSL color mode */
+    --first-color: hsl(var(--hue-color), 100%, 41%);
+    --first-color-second: hsl(var(--hue-color), 69%, 61%);
+    --first-color-alt: hsl(var(--hue-color), 57%, 53%);
+    --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+    --title-color: hsl(var(--hue-color), 8%, 15%);
+    --text-color: hsl(var(--hue-color), 8%, 45%);
+    --text-color-light: hsl(var(--hue-color), 8%, 65%);
+    --input-color: hsl(var(--hue-color), 70%, 96%);
+    --body-color: hsl(var(--hue-color), 60%, 99%);
+    --text-color: #fff;
+    --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+  
+    /*========== Font and typography ==========*/
+    --body-font: 'Poppins', sans-serif;
+
+}
+body{
+    background-color: white;
+    overflow-x: hidden;
+}
+
+.header, .section , .footer{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+main {
+display: flex;
+flex-direction: column;
+}
+
+/* fetured Section css */
+
+
+.features-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem;
+    background-image: url('./images/banner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 650px;
+
+}
+.features-content{
+   width: 80%;
+}
+
+.features-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.features-content > span {
+    color: var(--first-color);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.features-stats {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .features-stat {
+    width: 360px;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f3f3f3;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+  .features-stat i {
+    font-size: 48px;
+    color: #4CAF50;
+    margin-bottom: 10px;
+  }
+
+.features-stats span {
+    font-size: 2.5rem;
+    font-weight: bold;
+    display: block;
+}
+
+.features-actions {
+    order: 3;
+    flex-grow: 1;
+    text-align: center;
+}
+
+
+.buy-tickets-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+
+
+
+
+footer {
+    background-color: #0a0a0a;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+footer .footer-description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    order: 1;
+    flex-grow: 1;
+}
+
+footer .footer-description p {
+    margin-bottom: 0;
+    color: var(--text-color);
+}
+
+footer .footer-content {
+    order: 1;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer-content > p{
+    color: var(--text-color);
+}
+
+footer ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    order: 2;
+    flex-grow: 1;
+}
+
+footer ul li {
+    margin: 0 1rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.app-links {
+    order: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.app-links > p{
+color: var(--text-color);
+}
+.app-links > a{
+    width: 180px; 
+}
+.app-links > a > img {
+    width: 100%;
+    background: #fcfcfc;
+}
+.app-store-link {
+    margin-right: 1rem;
+}
+.divider{
+    border-top: 1px dashed rgb(109, 109, 109);
+}
+
+.privacy-link {
+    text-decoration: underline;
+}
+
+
+/* responsive images */
+
+@media screen and (max-width: 480px) {
+ 
+  }
+  @media screen and (max-width: 390px) {
+  
+  }
+
+  @media screen and (max-width: 360px) {
+   
+
+  }

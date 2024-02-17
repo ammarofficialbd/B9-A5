@@ -40,7 +40,7 @@
 </head>
 <header class="header">
     <!-- Add logo and navigation links here -->
-    <nav class="p-5 bg-white shadow md:flex md:items-center md:justify-between w-full">
+    <nav class="p-5 bg-white md:flex md:items-center md:justify-between w-full">
         <div class="flex justify-between items-center ">
             <span class="text-2xl cursor-pointer">
                 <img class="h-10 inline" src="">
@@ -52,8 +52,7 @@
             </span>
         </div>
 
-        <ul
-            class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+        <ul class="md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
             <li class="mx-4 my-6 md:my-0">
                 <a href="#" class="text-lg hover:text-lame-500 duration-500">Home</a>
             </li>
@@ -67,11 +66,14 @@
                 <a href="#" class="text-xl hover:text-lame-500 duration-500">Search</a>
             </li>
 
-            <button class="font-[Poppins] duration-500 px-6 py-2 mx-4  rounded w-24 flex gap-2">
-                Bus
-                <img src="./images/bus-icon.png" alt="" srcset="">
-            </button>
-            <h2 class=""></h2>
+            <div class="bus-btn-container">
+                <button class="bus-btn">
+                  Bus
+                  <div class="bus-icon">
+                    <img src="./images/bus-icon.png" alt="Bus Icon">
+                  </div>
+                </button>
+              </div>
         </ul>
     </nav>
 </header>
@@ -80,38 +82,79 @@
     <main>
         <!-- Featured Section -->
         <section class="features-section section">
-            <div class="features-content flex flex-col ">
+            <div class="features-content flex flex-col justify-center items-center">
                 <h2>End-to-End Travel with </h2>
-                <span>P Paribahan</span>
-                <p>Yes, you can run unit tests and view the results directly within the app. The integrated testing
+                <span>RapidTicketRide</span>
+                <p class="text-center">Yes, you can run unit tests and view the results directly within the app. The integrated testing
                     features allow for a streamlined.</p>
                     <div class="features-actions">
                         <button class="buy-tickets-button">Buy Tickets</button>
                     </div>   
             </div>
            
-            <!-- <div class="features-stats">
-                <div class="features-stat">
-                  <i class="material-icons">people</i>
-                  <h3>500K+</h3>
-                  <p>Registered Users</p>
+             <div class="features-stats gap-2 ">
+                <div class="features-stat flex justify-evenly items-center gap-2">
+                  <img src="./images/people.png" alt="" srcset="">
+                  <div class="flex flex-col gap-2"> 
+                    <h3 class="lg:text-4xl md:text-2xl text-xl font-bold">500K+</h3>
+                    <p>Registered Users</p>
+                  </div>
+                 
                 </div>
-                <div class="features-stat">
-                  <i class="material-icons">local_taxi</i>
-                  <h3>1.7 L</h3>
-                  <p>Tickets Sold</p>
+                <div class="features-stat flex justify-evenly items-center gap-2">
+                  <img src="./images/ticket-cupon.png" alt="">
+                  <div class="flex flex-col gap-2">   
+                    <h3 class="lg:text-4xl md:text-2xl text-xl font-bold">1.7 L</h3>
+                    <p>Tickets Sold</p> 
+                   </div>
+                
                 </div>
-                <div class="features-stat">
-                  <i class="material-icons">business</i>
-                  <h3>80K+</h3>
-                  <p>Rental Partners</p>
+                <div class="features-stat flex justify-evenly items-center gap-2">
+                 <img src="./images/stoppage.png" alt="" srcset="">
+                 <div class="flex flex-col gap-2 ">  
+                    <h3 class="lg:text-4xl md:text-2xl text-xl font-bold">80K+</h3>
+                    <p>Rental Partners</p>
+                 </div>
+                 
                 </div>
-              </div> -->
+              </div> 
           
         </section>
 
-        <section id="ticket-details">
-            <!-- Ticket details like route, seat selection, price, etc. go here -->
+        <section id="coupon-section" class="section mt-24 flex flex-col justify-center items-center">
+            <div class="text-center lg:text-4xl md:text-2xl text-2xl mb-5"> Best offers for you </div>
+            <!-- coupon details like route, seat selection, price, etc. go here -->
+            <div class="coupon-container">
+            <div class="coupon-item relative">
+                <div class="flex flex-col justify-center items-center"> 
+                        <div class="coupon-offer">15% OFF</div>
+                        <div class="coupon-description">on your next purchase</div>
+                        <div class="coupon-validity">use by January 2024</div> 
+                </div>
+                  
+                 <div class="divider">  <img src="./images/info-devider.png" alt="" srcset="">  </div> 
+                <div class="flex flex-col justify-center items-center"> 
+                    <div class="coupon-code">NEW15</div>
+                   <p class="text-slate-400"> Coupon Code</p>
+                </div>
+                  
+            </div>
+            <div class="coupon-item relative">
+                <div class="flex flex-col justify-center items-center"> 
+                        <div class="coupon-offer">15% OFF</div>
+                        <div class="coupon-description">on your next purchase</div>
+                        <div class="coupon-validity">use by January 2024</div> 
+                </div>
+                  
+                 <div class="divider">  <img src="./images/info-devider.png" alt="" srcset="">  </div> 
+                <div class="flex flex-col justify-center items-center"> 
+                    <div class="coupon-code">NEW15</div>
+                   <p class="text-slate-400"> Coupon Code</p>
+                </div>
+                  
+            </div>
+        </div>
+        <button class="coupon-button mt-5">See All Offers</button>
         </section>
         <section id="passenger-info">
             <!-- Passenger information form goes here -->
@@ -137,7 +180,7 @@
                 </a>
             </div>
         </div>
-        <div class="divider mt-5"> </div>
+        <div class="foot-divider mt-5"> </div>
         <div class="footer-content flex justify-between items-center mt-5">
             <p>&copy; 2024 P-Ticket services limited. All rights reserved.</p>
             <ul class="flex justify-end">

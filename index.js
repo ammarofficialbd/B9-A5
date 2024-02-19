@@ -91,7 +91,7 @@ for (let i = 0; i < seatAll.length; i++) {
     const totalPrice = selectedSeats.length * seatPrice;
     const discount = applyDiscount() ? getDiscount(totalPrice) : 0;
     const grandTotal = totalPrice - discount;
-    totalPriceElement.textContent = `BDT: ${totalPrice} TK`;
+    totalPriceElement.textContent = `BDT: ${totalPrice}`;
     //console.log(totalPrice)
     return {grandTotal, discount}
   }
@@ -129,7 +129,7 @@ function handleApplyButtonClick(e) {
     } else {
       updateTotalPrice();
 
-      grandTotalElement.textContent = `BDT: ${grandTotal} TK`;
+      grandTotalElement.textContent = `BDT: ${grandTotal}`;
       discountPrice.textContent = `
       Discount price : BDT - ${discount} TK`;  
       inputField.classList.add('hidden')

@@ -496,7 +496,23 @@ color: var(--text-color);
   
 }
 
-@media screen and (max-width: 320px) {
-   
-
+@media screen and (max-width: 340px) {
+  .coupon-item {
+    width: 300px;
+  }
+  .features-stats {
+    bottom: -260px;
+  }
+  .features-stat {
+    width: 280px;
+    padding: 20px;
+  }
+  #seat__bookings{
+    max-width: 300px;
+  }
+  .seat{
+      width: 2.2rem!important;
+      height: 2.2rem !important;
+  }
 }
+

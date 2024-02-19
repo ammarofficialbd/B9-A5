@@ -10,9 +10,9 @@ function Menu(e) {
 //Select All Variables
 
 const seatAll = document.querySelectorAll('.seat')
-let totalSeats = document.getElementById('total-seat')
-let seatCount = document.getElementById('seat__number')
-let grandTotalElement = document.getElementById('grand__total')
+const totalSeats = document.getElementById('total-seat')
+const seatCount = document.getElementById('seat__number')
+const grandTotalElement = document.getElementById('grand__total')
 const discountPrice = document.getElementById('discountPrice')
 const couponInput = document.getElementById('coupon');
 const PassengerName = document.getElementById('passengerName');
@@ -108,7 +108,7 @@ for (let i = 0; i < seatAll.length; i++) {
 
 function applyDiscount() {
   const couponValue = couponInput.value.trim().toLowerCase();
-  return couponValue === 'new 15' || couponValue === 'couple 20';
+  return couponValue === 'new 15' || couponValue === 'couple 20' || couponValue === 'new15' || couponValue === 'couple20';
 }
 
 function getDiscount(totalPrice) {
@@ -144,7 +144,6 @@ function handleSubmitButtonClick(e) {
   }else{
     alert("Plz Provide required Field")
   }
- 
 }
 
 

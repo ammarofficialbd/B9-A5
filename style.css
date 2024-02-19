@@ -46,6 +46,8 @@
 body{
     background-color: white;
     overflow-x: hidden;
+    scroll-behavior: smooth;
+    transition: 3s all;
 }
 
 .header, .section , .footer{
@@ -184,6 +186,8 @@ flex-direction: column;
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 12px;
+    scroll-behavior: smooth;
+    transition: 3s all;
 }
 
 /* copune section css */
@@ -346,6 +350,15 @@ color: var(--text-color);
 
 
 /* responsive site */
+@media screen and (max-width: 1200px) {
+  .features-stat {
+    width: 280px;
+    padding: 20px;
+  }
+  #coupon-section{
+    padding: 1rem;
+  }
+}
 @media screen and (max-width: 600px) {
   .features-section {
       padding: 4rem;
@@ -374,7 +387,7 @@ color: var(--text-color);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      bottom: -260px;
+      bottom: -280px;
     }
   
     .features-stat {

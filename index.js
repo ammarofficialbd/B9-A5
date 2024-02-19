@@ -21,9 +21,8 @@ const applyButton = document.getElementById('applyButton');
 const submitButton = document.getElementById('submitButton');
 const inputField = document.getElementById('input_field')
 
-//console.log(totalSeats)
 let availableSeats = 40 ; 
-//console.log(seat)
+
 const seatPrice = 550;
 let selectedSeats = []
 const maxSelectedSeats = 4
@@ -35,7 +34,7 @@ for (let i = 0; i < seatAll.length; i++) {
   const seat = seatAll[i];
   seat.addEventListener("click", () => {
     const seatId = seat.id;
-   // console.log(seatId)
+
     const seatName = seat.innerText
     const seatInfo = document.getElementById("seat-info")
     seat.classList.add("selected")
@@ -45,8 +44,7 @@ for (let i = 0; i < seatAll.length; i++) {
       if(!selectedSeats.includes(seatId)){
         const newRow = document.createElement("tr");
         const cellA1 = createTableCell(seatName);
-       // console.log(cellA1)
-  
+      
         const cellEconomy = createTableCell("Economy");
         const cellPrice = createTableCell("550");
   
@@ -80,9 +78,7 @@ for (let i = 0; i < seatAll.length; i++) {
       alert("Can't Selected more then 4 seats and can't")
     }
 
-
   })
-
 
  
 /* update Total price */
@@ -92,15 +88,12 @@ for (let i = 0; i < seatAll.length; i++) {
     const discount = applyDiscount() ? getDiscount(totalPrice) : 0;
     const grandTotal = totalPrice - discount;
     totalPriceElement.textContent = `BDT: ${totalPrice}`;
-    //console.log(totalPrice)
     return {grandTotal, discount}
   }
   function updateAvailableSeats() {
-    console.log(availableSeats)
     totalSeats.innerText = `${availableSeats}`;
   }
   function updateSeatsCount() {
-    console.log(selectedSeats.length)
     seatCount.innerText = `${selectedSeats.length}`;
   }
 }

@@ -157,3 +157,9 @@ function handleSubmitButtonClick(e) {
     handleSubmitButtonClick(e);
   });
 
+/* refresh page */
+function refreshPage() {
+  location.reload(true); 
+  const settings = document.getElementById('wheel')
+  settings.classList.add('rotate-90')
+}

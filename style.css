@@ -251,7 +251,16 @@ flex-direction: column;
     cursor: pointer;
     margin-bottom: 10px;
   }
+/*  Seat booking css */
 
+#seat__number{
+  background-color: var(--first-color);
+  color: var(--text-color);
+  padding: 2px 4px;
+}
+
+
+/* Footer css */
 
 footer {
     position: relative;
@@ -393,7 +402,19 @@ color: var(--text-color);
     .coupon-code {
       font-size: 1.8rem;
     }
-    
+    .footer-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-description{
+      padding: 4px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center!important;
+    }
 }
 @media screen and (max-width: 480px) {
     .features-section {

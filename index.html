@@ -141,16 +141,16 @@
                     </div>
 
                 </div>
-                <div class="coupon-item relative">
+                <div class="coupon-item relative bg-lime-200">
                     <div class="flex flex-col justify-center items-center">
-                        <div class="coupon-offer">15% OFF</div>
+                        <div class="coupon-offer">20% OFF</div>
                         <div class="coupon-description">on your next purchase</div>
                         <div class="coupon-validity">use by January 2024</div>
                     </div>
 
                     <div class="divider"> <img src="./images/info-devider.png" alt="" srcset=""> </div>
                     <div class="flex flex-col justify-center items-center">
-                        <div class="coupon-code">NEW15</div>
+                        <div class="coupon-code">Copule 20</div>
                         <p class="text-slate-400"> Coupon Code</p>
                     </div>
 
@@ -176,7 +176,7 @@
 
                         <div class="bus-btn-container mt-4 flex items-center lg:px-4 md:px-2 px-2">
                             <img src="./images/seat-green.png" alt="" srcset="" class="w-6 h-6">
-                            <div class="bus-btn text-xl">40 Seats left</div>
+                            <div class="bus-btn text-xl"> <span id="total-seat" class="font-bold"> 40 </span> Seats left</div>
                         </div>
                     </div>
                     <div class="mt-6 bg-gray-100 rounded-lg">
@@ -427,7 +427,7 @@
                             <!-- Table Header -->
                             <thead>
                                 <tr class="div-b border-gray-400">
-                                    <th class="p-2">Seat</th>
+                                    <th class="p-2">Seat <span id="seat__number"> 0 </span></th>
                                     <th class="p-2">Class</th>
                                     <th class="p-2">Price</th>
                                 </tr>
@@ -442,17 +442,20 @@
                         <!-- total price -->
                         <div class="flex justify-between items-center px-8 py-2 border-t-2 border-gray-300"> 
                             <span> Total price</span>
-                            <span id="totalPrice">  550 </span>  
+                            <span id="totalPrice">BDT  0 </span>  
+                        </div>
+                        <div id="discountPrice" class="flex justify-center items-center px-8 py-2"> 
+                          
                         </div>
                         <div class="container mx-auto lg:p-2 md:p-2">
                             <form class="p-4 rounded">
-                                <div class="mb-4 relative">
+                                <div class="mb-4 relative" id="input_field">
                                     <input type="text" id="coupon" class="appearance-none border-2 rounded w-full py-5 px-4 text-gray-700 leading-tight focus:outline-none focus:border-blue-500" placeholder="Have any coupon?">
-                                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded focus:outline-none focus:shadow-outline absolute right-2 bottom-2">Apply</button>
+                                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded focus:outline-none focus:shadow-outline absolute right-2 bottom-2" id="applyButton">Apply</button>
                                 </div>
                                 <div class="flex justify-between items-center text-gray-700">
-                                        <span>Grand Total:</span>
-                                        <span class="font-bold">BDT 1100</span>
+                                        <span id="Grandtotal">Grand Total:</span>
+                                        <span class="font-bold" id="grand__total">BDT 0</span>
                                 </div>
                             </form>
                         </div>
@@ -466,14 +469,14 @@
                                     Name *</label>
                                 <input type="text" id="passengerName" name="passengerName"
                                     class="w-full px-3 py-4 border rounded-md focus:outline-none focus:border-blue-500" 
-                                    placeholder="Enter Your Name">
+                                    placeholder="Enter Your Name" required>
                             </div>
                             <!-- Phone Number -->
                             <div class="mb-6">
                                 <label for="phoneNumber" class="block text-gray-700 lg:text-lg md:text-md font-bold mb-2">Phone
                                     Number *</label>
-                                <input type="tel" id="phoneNumber" name="phoneNumber"
-                                    class="w-full px-3 py-4 border rounded-md focus:outline-none focus:border-blue-500" placeholder="Enter Your Phone Number">
+                                <input type="number" id="phoneNumber" name="phoneNumber"
+                                    class="w-full px-3 py-4 border rounded-md focus:outline-none focus:border-blue-500" placeholder="Enter Your Phone Number" required>
                             </div>
                             <!-- Email Id -->
                             <div class="mb-4">
@@ -486,7 +489,7 @@
                     </div>
                     <!-- Submit Button -->
                     <button type="submit"
-                        class="bg-blue-500 text-white px-4 py-4 rounded-md hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue active:bg-blue-800 lg:text-xl md:text-lg">
+                        class="bg-blue-500 text-white px-4 py-4 rounded-md hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue active:bg-blue-800 lg:text-xl md:text-lg" id="submitButton">
                         Submit
                     </button>
 
@@ -498,11 +501,11 @@
     </main>
     <!-- Footer -->
     <footer class="footer p-16">
-        <div class="flex">
+        <div class="footer-info flex">
             <div class="footer-content">
                 <div class="footer-description">
-                    <p>P-Ticket</p>
-                    <p>
+                    <h2 class="text-3xl text-green-500 py-3">RapidTicketRide</h2>
+                    <p class="text-gray-500 ">
                         A digital platform to make your daily commuting better.
                     </p>
                 </div>
@@ -516,7 +519,7 @@
         </div>
         <div class="foot-divider mt-5"> </div>
         <div class="footer-content flex justify-between items-center mt-5">
-            <p>&copy; 2024 P-Ticket services limited. All rights reserved.</p>
+            <p>&copy; 2024 <span class="text-green-500"> RapidTicketRide </span> services limited. All rights reserved.</p>
             <ul class="flex justify-end">
                 <li><a href="#terms">Terms & condition</a></li>
                 <li><a href="#download">Download our app</a></li>
